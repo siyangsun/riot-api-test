@@ -36,3 +36,10 @@ class RiotAPI:
             names=name
             )
         return self._request(api_url)
+    
+    def get_mastery_by_summoner(self, summoner_ids):
+        api_url = Consts.URL['champion_mastery_by_summoner'].format(
+            version=Consts.API_VERSION['champion_mastery'],
+            ids=summoner_ids
+            )
+        return self._request(api_url)
